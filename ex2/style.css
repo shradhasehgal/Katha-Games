@@ -1,0 +1,39 @@
+#aan
+{
+    padding: 1vh 0; 
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+body
+{
+    background: url("img/i.am.aan.hindi.jpg")no-repeat center center fixed;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-left: 10vw; 
+    padding-top: 23vh;
+}
+
+.option
+{
+    width: 10vw;
+    display: block;
+    padding: 2vh;
+}
+
+.option:hover
+{
+    border-radius: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ans
+{
+    font-size: 10vh;
+    display: none;
+}
