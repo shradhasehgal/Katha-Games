@@ -1,25 +1,45 @@
-#aan
-{
-    padding: 1vh 0; 
-    display: block;
-    margin: auto;
-    max-width: 100%;
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html, body{
+    height: 97%;
 }
 
 body
 {
-    background: url("img/i.am.aan.hindi.jpg")no-repeat center center fixed;
-    webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-left: 10vw; 
-    padding-top: 23vh;
+	font-family: 'PT Serif', serif;
+    text-align: center;
+    height: 100%;
+}
+
+.child
+{
+    background-image: url('aan.jpg');
+    background-position:center;
+	background-repeat:no-repeat;
+    background-size:cover;
+    margin: auto;
+    margin-top: 5vh;
+    width: 972px;
+    height: 756px;
+    max-width: 90%;
+    max-height: 90%;
+    padding-top: 18vh; 
+    padding-left: 5vw;
+}
+
+.text
+{
+    background-color: coral;
+    width: 10vw;
+    float: left;
 }
 
 .option
 {
-    width: 10vw;
+    width: 20vh;
     display: block;
     padding: 2vh;
 }
@@ -34,6 +54,79 @@ body
 
 .ans
 {
-    font-size: 7vh;
+    font-size: 10vh;
     display: none;
+}
+
+.an{
+    width: 10vh;
+}
+
+.sib1
+{
+    width: 38%;
+    float: left;
+}
+
+div.sib2
+{
+    float:left;
+    background-color: white;
+    height: 30%;
+    width: 57%;
+    margin-top: 20vh;
+    display: flex;
+    align-items: center ;
+    display: none;
+}
+
+div.sib2 p{
+    margin: auto;
+    max-width: 90%;
+}
+
+#legend
+{
+    font-size: 2em;
+    color: black;
+}
+
+@media screen and (max-width: 960px) {
+
+    h1, #legend{
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        font-size: 1em;
+    }
+
+    #legend
+    {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+    }
+    .child{
+        margin-top: 0;
+    }
+
+    div.sib2
+    {
+        height: 60%;
+        width: 40%;
+        margin-top:10vh;
+    }
+
+    .sib1{
+        width: 57%;
+    }
+
+    .child{
+        padding-left: 1vw;
+        max-height: 87%;
+    }
 }
