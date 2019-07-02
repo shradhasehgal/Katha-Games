@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    var m0 =  "Lake: Yayy! By cleaning the waterbody, you have given Aan fresh drinking water!"
-    var m1 = "Poacher: Nooooo! The poacher is after Aan's ivory tusks!";
-    var m2 = "Trees: Congrats! By planting more trees, you have saved Aan!";
+    var m0 =  "Yayy! By cleaning the waterbody, you have given Aan fresh drinking water!"
+    var m1 = "Nooooo! The poacher is after Aan's ivory tusks!";
+    var m2 = "Congrats! By planting more trees, you have saved Aan!";
     
     $("img").click(function(){
         var id = $(this).attr('id');

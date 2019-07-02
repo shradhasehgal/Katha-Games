@@ -78,6 +78,7 @@ div.sib2
     display: flex;
     align-items: center ;
     display: none;
+    border: 2px solid black;
 }
 
 div.sib2 p{
