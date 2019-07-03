@@ -16,7 +16,7 @@ body
 
 .child
 {
-    background-image: url('aan.jpg');
+    background-image: url('img/aan.jpg');
     background-position:center;
 	background-repeat:no-repeat;
     background-size:cover;
@@ -55,6 +55,10 @@ body
 .ans
 {
     font-size: 10vh;
+}
+
+#ans0, #ans1, #ans2
+{
     display: none;
 }
 
@@ -91,6 +95,45 @@ div.sib2 p{
     font-size: 2em;
     color: black;
 }
+.bubble {
+	position: relative;
+	background: white;
+	border: 1px solid black;
+    width:250px;
+    padding:10px;
+    font-family:arial;
+    margin:0 auto;
+    font-size:20px;
+    border-radius:6px;
+    margin-left: 20px; 
+    display:none;   
+}
+
+.bubble:after,
+.bubble:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.bubble:after {
+	border-color: rgba(255, 255, 204, 0);
+	border-right-color: white;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.bubble:before {
+	border-color: rgba(255, 204, 0, 0);
+	border-right-color:black;
+	border-width: 16px;
+	margin-top: -16px;
+}
+  
 
 @media screen and (max-width: 960px) {
 
@@ -127,7 +170,14 @@ div.sib2 p{
     }
 
     .child{
-        padding-left: 1vw;
+        padding-left: 0vw;
         max-height: 87%;
+        padding-top: 12vh;
+    }
+    .bubble {
+        width:100px;
+        padding:10px;
+        font-size:14px;
+        margin-left: 15px;
     }
 }
