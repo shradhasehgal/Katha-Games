@@ -26,13 +26,30 @@ body
 
 .mount {
 
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     position: absolute;
+    border: 1px solid black;
 }
 
 .smol
 {
-    width:200px;
-    height:200px;
+    width:75px;
+    height: 75px;
+    display:block;
+    cursor:move;
+}
+
+.legends
+{
+    display: block;
+    text-align: left;
+    position: absolute;
+    top: 52%;
+    right: 2%;
+}
+
+table
+{
+    font-family: 'Lato', sans-serif;
 }

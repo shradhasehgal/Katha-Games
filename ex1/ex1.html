@@ -15,17 +15,37 @@
         <h1> Place the legends at the correct location! </h1>
     </div>    
     <div class="child" id="map">
-        <div class="mount" id="1"></div>
-        <div class="mount" id="2"></div>
-        <div class="mount" id="3"></div>
-        <div class="mount" id="4"></div>
-        <div class="mount" id="5"></div>
+        <div class="mount" id="1" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+        <div class="mount" id="2" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+        <div class="mount" id="3" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+        <div class="mount" id="4" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+        <div class="mount" id="5" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
         <div class="legends">
-            <img class="smol" src="img/0.png">
-            <img class="smol" src="img/1.png">
-            <img class="smol" src="img/2.png">
-            <img class="smol" src="img/3.png'">
-            <img class="smol" src="img/4.png">'
+            <table>
+                
+                <tr>
+                    <td><img class="smol" id="01" draggable="true" ondragstart="drag(event)" src="img/1.png"></td>
+                    <td>Garo & Khasi Hills</td>
+                </tr>
+                <tr>
+                    <td><img class="smol" id="02" draggable="true" ondragstart="drag(event)" src="img/0.png"></td>
+                    <td>Himalayas</td>
+                </tr>
+                <tr>
+                    <td><img class="smol" id="03" ondragstart="drag(event)" draggable="true" src="img/3.png"></td>
+                    <td>Aravalli Hills</td>
+                </tr>
+                <tr>
+                    <td><img class="smol" id="04" draggable="true" ondragstart="drag(event)" src="img/4.png"></td>
+                    <td>Eastern Ghats </td>
+                </tr>
+                <tr>
+                    <td><img class="smol" id="05" draggable="true" ondragstart="drag(event)" src="img/2.png"></td>
+                    <td>Western Ghats</td>
+                </tr>    
+            </table>
+            
+           
 
         </div>
     </div>
