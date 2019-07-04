@@ -4,10 +4,10 @@ function myFunction() {
     var w = window.innerWidth;
     var h = window.innerHeight;
     var wmap;
-    if(9/10*w > 700)
+    if(95/100*w > 700)
         wmap = 700;
 
-    else wmap = 9/10*w;
+    else wmap = 95/100*w;
     var hmap = 4008/3508*wmap;
     $("#map").css({   
         "width": wmap, 
@@ -48,6 +48,18 @@ function drop(ev, id) {
     var dat=parseInt(data);
 
     if(id == dat)
+    {
+        var i = $("#"+data).parent().parent();
+        
         ev.target.appendChild(document.getElementById(data));
+        var d = i.find("td:eq(1)").text();
+        var node = document.createElement("P");
+        // Create a <li> node
+        var textnode = document.createTextNode(d);
+        node.appendChild(textnode); 
+        ev.target.append(node);
+        console.log(d);
+        i.remove();
+    }
     
 };
