@@ -47,42 +47,56 @@ body
     top: 52%;
     right: 2%;
 }
-p{
+td p{
     background: white;
     padding: 3px;
+}
+
+p{
+    background: white;
 }
 table, td,tr {
     font-family: 'Lato', sans-serif;
 }
 
+@media screen and (max-width: 700px)
+{
+    .smol {
+        margin: -1px;
+    }
+
+    p {
+        font-size: 0.75em;
+        padding: 0;
+    }
+}
+
 @media screen and (max-width: 500px) {
 
     .mount {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     h1{
         font-size: 1em;
     }
 
-    table {
-        font-size: 0.5em;
-    }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
 
+    table, p{
+        font-size: 0.5em;
+    };
+}
+
+@media screen and (max-width: 400px) {
+    
     .mount {
         width: 30px;
         height: 30px;
     }
-
-    .smol{
-        margin: -1px;
-    }
-
-    p{
-        padding: 0;
-    }
 }
+
+
