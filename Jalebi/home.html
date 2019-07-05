@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Drag the Images to the correct step!</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="trial.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Heebo|Roboto:900|PT+Serif:700" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+	</head>
+   <body>
+      <h1>Drag the Images to the correct steps!</h1>
+      <div id="inputs">
+         <div class="box">
+			<div class="gallery">
+            	<img draggable="true" ondragstart="drag(event)" src="img/4.png" id="4">
+			</div>
+			<div class="gallery">
+				<img draggable="true" ondragstart="drag(event)" src="img/1.png" id="1">
+			</div>
+			<div class="gallery">
+				<img draggable="true" ondragstart="drag(event)" src="img/3.png" id="3">
+			</div>
+			<div class="gallery">
+				<img draggable="true" ondragstart="drag(event)" src="img/2.png" id="2">
+			</div>
+			<div class="gallery">
+				<img draggable="true" ondragstart="drag(event)" src="img/5.png" id="5">
+			</div>
+			<div class="gallery">
+				<img draggable="true" ondragstart="drag(event)" src="img/0.png" id="0">
+			</div>      
+         </div>
+         <h1></h1>
+         <div id="timeline">
+            <ul id="ul1">
+				<li> Step 1 </li>
+				<div class="fill" class="gallery" id="00" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+				<li> Step 2 </li>
+				<div class="fill" class="gallery" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" id="01"></div>
+				<li> Step 3 </li>
+				<div class="fill" class="gallery" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" id="02"></div>
+				<li> Step 4 </li>
+				<div class="fill" class="gallery" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" id="03"></div>
+				<li> Step 5 </li>
+				<div class="fill" class="gallery" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" id="04"></div>
+				<li> Step 6 </li>
+				<div class="fill" class="gallery" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" id="05"></div>
+            </ul>
+         </div>
+      </div>
+   </body>
+   <script src="script.js"></script>
+   <script>
+	   function allowDrop(ev) {
+    ev.preventDefault();
+};
+
+function JSalert(){
+	swal("Congrats!", ", You have made delicious Jalebis!", "success");
+};
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+};
+
+var count = 0;
+
+function drop(ev, id) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var dat=parseInt(data);
+    if(id == dat){
+        count++;
+        $("#"+data).css({   
+            'border': '6px solid green',
+            'border-radius': '50%'
+        });
+        
+        $("#"+data).closest('li').css({
+            'color': 'green',
+            'background': 'green'
+        });
+
+        ev.target.appendChild(document.getElementById(data));    
+    }
+
+    if(count == 6)
+	{
+		swal("Yumm!", "You have made delicious Jalebis!","success")
+		.then((value) => {
+			window.location.reload();
+		});
+	}
+};
+   </script>
+</html>
+
