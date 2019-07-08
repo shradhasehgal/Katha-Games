@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="shortcut icon" href="img/el.png" />
+            <title>Exercise 1</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Heebo|Roboto:900|PT+Serif:700|Palatino|Lobster|Cardo:700|Hind:400,500|Playfair+Display:400,700&display=swap" rel="stylesheet">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="script.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <h1>Which of these activities of adults do you already do?</h1>
+            <div class="box">
+                <div class="gallery">
+                    <img src="img/0.jpg" id="0">
+                    <div class="desc">Buying vegetables</div>
+                </div>
+                <div class="gallery">
+                    <img src="img/1.jpg" id="1">
+                    <div class="desc">Cleaning the house</div>
+                </div>
+                <div class="gallery">
+                    <img src="img/2.jpg" id="2">
+                    <div class="desc">Speaking up if you see something wrong happening</div>
+                </div>
+                <div class="gallery">
+                    <img src="img/3.jpg" id="3">
+                    <div class="desc">Cooking food</div>
+                </div>
+                <div class="gallery">
+                    <img src="img/4.jpg" id="4">
+                    <div class="desc">Taking care of friends and family</div>
+                </div>
+            </div>
+        <script>
+            var click = 0;
+            $("img").click(function() {
+                var id = $(this).attr('id');
+                click++;
+                $('#'+id).css({
+                    'border': '10px solid green',
+                    'border-radius': '20px',
+	                'box-shadow': '0 0 10px 10px rgba(0,0,0,0.1)',
+                });
+                
+                if(click == 2)
+                {
+                    swal("Wow!", "You bear so many adult responsibilities already!")
+                    .then((value) => {
+                        window.location.reload();
+                    });
+                }    
+            });
+        </script>
+    </body>
+</html>
