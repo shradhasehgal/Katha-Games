@@ -1,69 +1,79 @@
 <html>
     <head>
-            <title> Ex 1 </title>
-		
+            <title> Exercise 2 </title>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="style.css">
             <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Heebo|Roboto:900|PT+Serif:700" rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+            <script src="script.js"></script>
     </head>
     
     <body>
         <div id="navbar" class="sticky">
             <div class="container">
                 <ul class="center">
-                    <li><img src="img/c0.png" style="width:80px"></li>
-                    <li><img src="img/c1.png" style="width:80px"></li>
-                    <li><img src="img/c2.png" style="width:80px"></li>
-                    <li><img src="img/c3.png" style="width:80px"></li>
-                    <li><img src="img/c4.png" style="width:80px"></li>
-                    <li><img src="img/c5.png" style="width:80px"></li>
-                    <li><img src="img/c6.png" style="width:80px"></li>
-                    <li><img src="img/c7.png" style="width:80px"></li>
-                    <li><img src="img/c8.png" style="width:80px"></li>
-                    <li><img src="img/c9.png" style="width:80px"></li>
+                    <li><img class="ins" src="img/c0.png" id="01" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c1.png" id="00" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c2.png" id="02" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c3.png" id="03" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c4.png" id="04" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c5.png" id="08" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c6.png" id="05" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c7.png" id="07" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c8.png" id="06" ondragstart="drag(event)" draggable="true"></li>
+                    <li><img class="ins" src="img/c9.png" id="09" ondragstart="drag(event)" draggable="true"></li>
                 </ul>
             </div>
-        </div>   
-        <h1> Assign the instruments to corresponding profession! </h1>
-        <div class="box">
-            <div class="gallery">
-                <img src="img/0(1).png" id="0">
+        </div> 
+        <div class="remaining">  
+            <div class="heading">
+                <h1> Assign the instruments to the corresponding profession! </h1>
             </div>
-            <div class="gallery">
-                <img src="img/1(1).png" id="1">
-            </div>
-            <div class="gallery">
-                <img src="img/2(1).png" id="2">
-            </div>
-            <div class="gallery">
-                <img src="img/3(1).png" id="3">
-            </div>
-            <div class="gallery">
-                <img src="img/4(1).png" id="4">
-            </div>
-            <div class="gallery">
-                <img src="img/p5.png" id="0">
-            </div>
-            <div class="gallery">
-                <img src="img/p6.png" id="1">
-                <div class="desc">Cleaning the house</div>
-            </div>
-            <div class="gallery">
-                <img src="img/p7.png" id="2">
-                <div class="desc">Speaking up if you see something wrong happening</div>
-            </div>
-            <div class="gallery">
-                <img src="img/p8.png" id="3">
-                <div class="desc">Cooking food</div>
-            </div>
-            <div class="gallery">
-                <img src="img/p9.png" id="4">
-                <div class="desc">Taking care of friends and family</div>
-            </div>
+            <div class="box">
+                <div class="gallery">
+                    <img src="img/0.png">
+                    <div class="place" id="0" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)">
+                    </div>
+                </div>
+                <div class="gallery">
+                    <img src="img/1.png">
+                    <div class="place" id="1" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/2.png">
+                    <div class="place" id="2" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/3.png">
+                    <div class="place" id="3" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/4.png">
+                    <div class="place" id="4" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/5.png">
+                    <div class="place" id="5" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/6.png">
+                    <div class="place" id="6" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/7.png">
+                    <div class="place" id="7" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/8.png">
+                    <div class="place" id="8" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)" ></div>
+                </div>
+                <div class="gallery">
+                    <img src="img/9.png">
+                    <div class="place" id="9" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
+                </div>
 
+            </div>
         </div>
     </body>
 </html>

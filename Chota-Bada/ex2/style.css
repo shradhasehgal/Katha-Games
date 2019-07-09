@@ -1,7 +1,7 @@
 #navbar {
     margin: 0;
     width: 100%;
-    background: #fff;
+    background: rgb(192, 174, 174);
     padding: 20px 0;
     z-index: 999;
 }
@@ -9,23 +9,6 @@
 #navbar .container {
   padding: 10px 0;
   max-width: 100%;
-}
-
-#navbar .left, .right {
-    display: inline-block;
-}
-
-#navbar .left {
-  width: 30%;
-}
-
-#navbar .right {
-  width: 70%;
-}
-
-#navbar .right {
-    float: right;
-    text-align: right;
 }
 
 #navbar ul {
@@ -66,42 +49,82 @@
 body
 {
 	font-family: 'PT Serif', serif;
-	text-align: center;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
 }
 
+/* .box
+{
+  margin-left: 10vw;
+} */
 div.gallery {
 	margin: 5px;
-    width: 300px;
-    height: 424px;
-	max-width: 90vw;
-	display: inline-block;
+  width: 200px;
+  max-width: 90vw;
+  display: inline-table;
+  /* float:left; */
+  margin: 3%;
 }
   
 div.gallery img {
-	width: 300px;
-	height: 516px;
+	width: 200px;
+  height: 316px;
+  padding: 10%;
 }
 
-div.gallery img:hover{
+div.gallery{
 	border-radius: 20px;
 	box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
 	transition: all 0.3s ease;
-	cursor: pointer;
 }
-  
-div.desc {
-	padding: 15px;
-	text-align: center;
-	font-family: 'Lato', sans-serif;
+
+.remaining
+{
+  margin-top: 25vh;
 }
 
 h1
 {
 	text-align: center;
-	font-size: 3em;
+	font-size: 2em;
 }
 
+div.place
+{
+  border-radius: 5px;
+	border: 1px solid rgb(0, 0, 0);
+  height: 150px;
+}
 
+div.place img{
+  width: 100px;
+  height: auto;
+}
+#navbar img{
+  width: 55px;
+  cursor: pointer;
+}
+.heading
+{
+  max-width: 95%;
+}
+
+@media screen and (max-width: 1000px) {
+  
+  h1{
+    font-size: 2em;
+  }
+
+  .remaining{
+    margin-top: 25vh;
+  }
+
+  #navbar img{
+    width: 45px;
+  }
+}
 @media screen and (max-width: 700px) {
 	h1
 	{
@@ -110,8 +133,38 @@ h1
 
 	div.gallery img {
 
-		width: 200px;
-		height: auto;
+    height: 200px;
+    width:auto;
 		
-	}
+  }
+
+  div.gallery
+  {
+    width: 150px;
+    margin-bottom: 5vh;
+  }
+  
+  #navbar img{
+    width:30px;
+  }
+
+  #navbar{
+    padding-top: 0;
+    padding-bottom:0;
+  }
+
+
+  div.place
+  {
+    height: 70px;
+  }
+
+  div.place img{
+    width: 60px;
+    height: auto;
+  }
+  .remaining
+  {
+    margin-top: 30vh;
+  }
 }
