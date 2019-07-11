@@ -7,6 +7,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="script.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     </head>
     
     <body>
@@ -15,8 +16,6 @@
                 <ul class="center">
                     <li><img class="ins" src="img/c0.png" id="01" ondragstart="drag(event)" draggable="true"></li>
                     <li><img class="ins" src="img/c1.png" id="00" ondragstart="drag(event)" draggable="true"></li>
-                    <li><img class="ins" src="img/c2.png" id="02" ondragstart="drag(event)" draggable="true"></li>
-                    <li><img class="ins" src="img/c3.png" id="03" ondragstart="drag(event)" draggable="true"></li>
                     <li><img class="ins" src="img/c4.png" id="04" ondragstart="drag(event)" draggable="true"></li>
                     <li><img class="ins" src="img/c5.png" id="08" ondragstart="drag(event)" draggable="true"></li>
                     <li><img class="ins" src="img/c6.png" id="05" ondragstart="drag(event)" draggable="true"></li>
@@ -30,7 +29,7 @@
             <div class="heading">
                 <h1> Assign the instruments to the corresponding profession! </h1>
             </div>
-            <div class="box">
+            <div id="box1">
                 <div class="gallery">
                     <img src="img/0.png">
                     <div class="place" id="0" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)">
@@ -41,14 +40,6 @@
                     <div class="place" id="1" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
                 </div>
                 <div class="gallery">
-                    <img src="img/2.png">
-                    <div class="place" id="2" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
-                </div>
-                <div class="gallery">
-                    <img src="img/3.png">
-                    <div class="place" id="3" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
-                </div>
-                <div class="gallery">
                     <img src="img/4.png">
                     <div class="place" id="4" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
                 </div>
@@ -56,6 +47,8 @@
                     <img src="img/5.png">
                     <div class="place" id="5" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
                 </div>
+            </div>
+                <div id="box2">
                 <div class="gallery">
                     <img src="img/6.png">
                     <div class="place" id="6" ondrop="drop(event,$(this).attr('id'))" ondragover="allowDrop(event)"></div>
