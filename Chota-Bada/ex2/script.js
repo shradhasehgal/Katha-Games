@@ -24,6 +24,14 @@ function drop(ev, id) {
             $("#box2").show();
 
         }
+
+        if(count == 8)
+        {
+            swal("Congrats!", "You have matched all equipment to the professions correctly!","success")
+            .then((value) => {
+                window.location.reload();
+            });
+        }    
+           
     }
-    
 };
