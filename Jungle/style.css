@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body
+{
+	font-family: 'PT Serif', serif;
+    text-align: center;
+    height: 100%;
+}
+
+#forest {
+    margin: 0 auto;
+    height: auto;
+    background-image: url('images/1.png'); 
+    background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+  }
+
+.smol
+{
+    height: auto;
+}
