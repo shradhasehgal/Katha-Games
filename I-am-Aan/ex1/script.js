@@ -41,7 +41,7 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 };
-
+var count = 0;
 function drop(ev, id) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -49,8 +49,8 @@ function drop(ev, id) {
 
     if(id == dat)
     {
+        count++;
         var i = $("#"+data).parent().parent();
-        
         ev.target.appendChild(document.getElementById(data));
         var d = i.find("td:eq(1)").text();
         var node = document.createElement("P");
@@ -61,5 +61,15 @@ function drop(ev, id) {
         console.log(d);
         i.remove();
     }
+
+    if(count==5)
+    {
+        swal("Congrats!", "You have placed all the legends at the correct positions!","success")
+            .then((value) => {
+                window.location.reload();
+            });
+    }
+
+    console.log(count);
     
 };
