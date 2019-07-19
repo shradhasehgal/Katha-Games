@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <link rel="shortcut icon" href="img/el.png" />
+            <link rel="shortcut icon" href="images/2.png" />
             <title>Exercise 1</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,18 +10,35 @@
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="script.js"></script>
     </head>
-
+    <body onresize="myFunction()">
     <body>
         <div class="heading">
             <h1> Click on the animals to listen to the sounds they make! </h1>
         </div> 
-        <div class="forest">
-            <img id="0" class="smol" src="images/2.png">
-            <img id="1" class="smol" src="images/3.png">
-            <img id="2" class="smol" src="images/4.png">
-            <img id="3" class="smol" src="images/5.png">
-            <img id="4" class="smol" src="images/7.png">
-
+        <audio id="tiger">
+            <source src="audio/tiger.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="elephant">
+            <source src="audio/elephant.mp3" type="audio/mp3" />
+            
+        </audio>
+        <audio id="bee">
+            <source src="audio/bee.mp3" type="audio/mp3" />
+            
+        </audio>
+        <audio id="crow">
+            <source src="audio/crow.mp3" type="audio/mp3" />
+        </audio>
+        <audio id="pig">
+            <source src="audio/pig.mp3" type="audio/mp3" />
+        </audio>
+        <div id="forest">
+            <img id="1" class="smol" onClick="document.getElementById('elephant').play(); return false;" src="images/2.png">
+            <img id="2" class="smol" onClick="document.getElementById('tiger').play(); return false;" src="images/3.png">
+            <img id="3" class="smol" onClick="document.getElementById('crow').play(); return false;" src="images/4.png">
+            <img id="4" class="smol" onClick="document.getElementById('pig').play(); return false;" src="images/5.png">
+            <img id="5" class="smol" onClick="document.getElementById('bee').play(); return false;" src="images/7.png">
         </div>
 
     </body>

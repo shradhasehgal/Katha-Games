@@ -11,15 +11,30 @@ body
 }
 
 #forest {
-    margin: 0 auto;
-    height: auto;
     background-image: url('images/1.png'); 
     background-position:center;
 	background-repeat:no-repeat;
-	background-size:cover;
+    background-size:cover;
+    margin: auto;
+    position: relative;
   }
 
 .smol
 {
     height: auto;
+    position: absolute;
+    cursor: pointer;
+}
+
+.smol:hover
+{   
+    transform: scale(1.05); 
+}
+
+@media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 1em;
+    }
+
 }
