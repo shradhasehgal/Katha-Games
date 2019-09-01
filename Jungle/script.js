@@ -14,6 +14,8 @@ function myFunction() {
         "height": hmap
     });
 
+    console.log(w,h);
+
     var smol = 13/80*hmap;
     $("#5").css({   
         "width": smol, 
